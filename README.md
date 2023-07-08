@@ -1,2 +1,2 @@
 # OverTheWire
-Write-ups to wargames 
+This repository contains write-ups to wargames from [OverTheWire](https://overthewire.org/wargames/).
