@@ -104,13 +104,28 @@ cat unreverse.txt | base64 --decode >> secret.txt
 After this step, the secret is saved in a file named secret.txt
 When we input the secret in the website and submit it, we are presented with the solution.
 
+## Level 9 &rarr; Level 10
 
+Here again we have a link to some source code. 
+From this we can deduct that whatever we input and submit is passed to a *grep* command that looks for matches to this pattern in a file called directory.txt.
+First we can try to set the input to an empty string `''`. 
+This will return every entry in the directory.txt file. 
+Now if we look trough all the entries we will find that the solution is not present.
 
+So how can we solve this? Remember that every password is inside a file `/etc/natas_webpass/natasX`.
+So what we have to do here is to find the correct input so that the *grep* command will not only scan directory.txt but also `/etc/natas_webpass/natas10`.
+This can be achieved with the following input:
 
+```
+'' /etc/natas_webpass/natas10
+```
 
+No we can the solution in the first line.
 
+## Level 10 &rarr; Level 11
 
-
+This is very similar to the previous level. The only difference is that the input is checked to not contain a certain set of characters.
+However, our solution from the previous level works here too :)
 
 
 
